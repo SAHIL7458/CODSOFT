@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     srand(static_cast<unsigned>(time(nullptr))); 
 
-    int secretNumber = (rand() % 100) + 1;
+    int ranNumber = (rand() % 100) + 1;
 
     int guess;
     int attempts = 0;
@@ -18,12 +18,12 @@ int main() {
         cin >> guess;
         attempts++;
 
-        if (guess < secretNumber) {
+        if (guess < ranNumber) {
             cout << "Too low! Try again." << endl;
-        } else if (guess > secretNumber) {
+        } else if (guess > ranNumber) {
             cout << "Too high! Try again." << endl;
         } else {
-            cout << "Congratulations! You've guessed the number (" << secretNumber << ") in " << attempts << " attempts!" << endl;
+            cout << "Congratulations! You've guessed the number (" << ranNumber << ") in " << attempts << " attempts!" << endl;
             break;
         }
     }
